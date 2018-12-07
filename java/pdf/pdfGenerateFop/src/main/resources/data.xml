@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<araTemplate>
+    <title>Test Template</title>
+    <details>
+        <accessories>All Weather Floor Mats,Carpet Floor Mats</accessories>
+        <productCategory>Audio</productCategory>
+        <createdBy>design engineer</createdBy>
+        <lastRevisionDate>10/30/2017</lastRevisionDate>
+        <status>Draft</status>
+    </details>
+    <groupDetails>
+        <group>
+            <name>Group0</name>
+            <codeDetails>
+                <code>
+                    <regulatoryCode>40CFR571.210</regulatoryCode>
+                    <regulatoryLink>http://www.abcdefght.com</regulatoryLink>
+                    <regulatoryDesc>Sample Description for regulatory Code</regulatoryDesc>
+                    <regulatoryNotes>Text Notes</regulatoryNotes>                        
+                    <subsectionDetails>
+                        <subsection>
+                            <code>code1</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code2</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code3</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code3</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code4</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code5</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                        <subsection>
+                            <code>code6</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code7</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code8</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code9</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code10</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code11</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                    </subsectionDetails>
+                </code>
+            </codeDetails>
+        </group>
+        <group>
+            <name>Group1</name>
+            <codeDetails>
+                <code>
+                    <regulatoryCode>40CFR571.210</regulatoryCode>
+                    <regulatoryLink>http://www.abcdefght.com</regulatoryLink>
+                    <regulatoryDesc>Sample Description for regulatory Code</regulatoryDesc>
+                    <regulatoryNotes>Text Notes</regulatoryNotes>                        
+                    <subsectionDetails>
+                        <subsection>
+                            <code>code1</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code2</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code3</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code3</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code4</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code5</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                        <subsection>
+                            <code>code6</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code7</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code8</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code9</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code10</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                         <subsection>
+                            <code>code11</code>
+                            <description>Description</description>
+                            <notes>Notes</notes>
+                        </subsection>
+                    </subsectionDetails>
+                </code>
+            </codeDetails>
+        </group>
+    </groupDetails>    
+</araTemplate>

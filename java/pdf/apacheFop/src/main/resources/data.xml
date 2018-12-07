@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="application/xml"?>
+<users-data>
+    <header-section>
+        <data-type id="019">User Bill Data</data-type>
+        <process-date>Thursday December 9 2016 00:04:29</process-date>
+    </header-section>
+    <user-bill-data>
+        <full-name>John Doe</full-name>
+        <postal-code>34239</postal-code>
+        <national-id>123AD329248</national-id>
+        <price>17.84</price>
+    </user-bill-data>
+    <user-bill-data>
+        <full-name>Michael Doe</full-name>
+        <postal-code>54823</postal-code>
+        <national-id>942KFDSCW322</national-id>
+        <price>34.50</price>
+    </user-bill-data>
+    <user-bill-data>
+        <full-name>Jane Brown</full-name>
+        <postal-code>66742</postal-code>
+        <national-id>ABDD324KKD8</national-id>
+        <price>69.36</price>
+    </user-bill-data>
+</users-data>

@@ -1,0 +1,28 @@
+spring:
+   application:
+      name: simple-batch
+# Batch Configuration
+   batch:
+      initialize-schema: embedded
+      schema: classpath:schema-h2.sql
+      table-prefix: BATCH
+      job:
+         enabled: true
+# Datasource
+   datasource:
+      platform: h2
+      initialization-mode: embedded
+      url: jdbc:h2:mem:test
+      username: root
+      password: 
+      driver-class-name: org.h2.Driver
+      hikari:
+         maximumPoolSize: 5
+         connectionTimeout: 30000 # In milliseconds
+         idleTimeout: 600000 # In milliseconds 
+         maxLifetime: 1800000 # In milliseconds
+
+   # JPA DDL Statements
+   jpa:
+      database: H2 
+      show-sql: true

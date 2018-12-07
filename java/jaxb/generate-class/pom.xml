@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>vijay.poc.java.jaxb</groupId>
+	<artifactId>generate-class</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>generate-class</name>
+	<properties>
+		<app.finalname>generate-class</app.finalname>
+	</properties>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<!-- Define the directory where we generated java source files will be copied -->
+							<outputDirectory>src/main/java</outputDirectory>
+							<!-- Indicate that we should use wsdl input instead of XSDs -->
+							<sourceType>wsdl</sourceType>					
+							<!-- Define the directory where we should find the Source files -->
+							<sources>
+								<source>src/main/resources/BLZService.wsdl</source>
+							</sources>
+							<verbose>false</verbose>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

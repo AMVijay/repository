@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- ======================================================= -->
+	<!-- ********** Send IA Status to Status_Queue *** -->
+	<!-- ======================================================= -->
+	<bean id="jmsSender"
+		class="vijay.poc.mqConnection.JmsSender">
+		<property name="queueName"
+			value="MQ Queue Name" />
+		<property name="jmsQueueTemplate"
+			ref="appJmsQueueTemplate" />
+	</bean>
+
+	<bean id="appJmsQueueTemplate"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory"
+			ref="mqConnectionFactoryWithCredential" />
+	</bean>
+
+  	<bean id="mqConnectionFactoryWithCredential"
+		class="org.springframework.jms.connection.UserCredentialsConnectionFactoryAdapter">
+		<property name="targetConnectionFactory"
+			ref="mqConnectionFactory" />
+		<property name="username" value="userId" />
+		<property name="password" value="password" />
+	</bean>
+
+	<bean id="mqConnectionFactory"
+		class="com.ibm.mq.jms.MQQueueConnectionFactory">
+		<property name="hostName" value="hostname.domain.com" />
+		<property name="port" value="portNumber" />
+		<property name="queueManager" value="MQ Queue Manager Name" />
+		<property name="channel" value="MQ Client Channel Name" />
+		<property name="transportType" value="1" />
+	</bean>	
+</beans>
