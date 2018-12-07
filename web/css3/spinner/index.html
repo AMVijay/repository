@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>POC For Spinner using CSS3</title>
+        <link rel="stylesheet" type="text/css" href="./main.css">
+    </head>
+    <body>
+        <div id="spinner" class="spinner1">
+        </div>
+    </body>
+    <script>
+        setTimeout(() => {
+            document.getElementById("spinner").classList.remove("spinner1");
+            document.getElementById("spinner").classList.add("spinner2");
+        }, 5000);
+
+        setTimeout(() => {
+            document.getElementById("spinner").classList.remove("spinner2");
+            document.getElementById("spinner").classList.add("spinner3");
+        }, 10000);
+    </script>
+</html>
