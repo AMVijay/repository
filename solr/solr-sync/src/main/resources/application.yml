@@ -1,0 +1,38 @@
+# Application Properties
+spring:
+   application:
+      name: solr-sync
+
+   # SOLR (SolrProperties)
+   data:
+      solr:
+         host: http://ddc-uvlsolt03:8983/solr/
+
+   # H2 Web Console (H2ConsoleProperties)
+   h2:
+      console:
+         enabled: true # Whether to enable the console.
+         path: /h2-console # Path at which the console is available.
+         settings:
+            trace: false # Whether to enable trace output.
+            web-allow-others: false # Whether to enable remote access.
+
+   # Datasource
+   datasource:
+      platform: h2
+      initialization-mode: embedded
+      url: jdbc:h2:mem:test
+      username: root
+      password: 
+      driver-class-name: org.h2.Driver
+
+   # JPA DDL Statements
+   jpa:
+      database: H2 
+      show-sql: true
+
+# Actuator Configuration
+management:
+   health:
+      solr:
+         enabled: true # Whether to enable Solr health check.

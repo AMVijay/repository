@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Validate Auto Suggest</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                $("#search").keyup(function(){
+
+                    var searchKeyword = $("#search").val();
+                    console.log("searchKeyword : " + searchKeyword);
+
+                    var urlValue = "http://localhost:8983/solr/carmodels/suggest?"
+                                + "suggest=true&suggest.build=true"
+                                + "&suggest.dictionary=mySuggester&suggest.q="
+                                + searchKeyword;
+                    // console.log(urlValue);
+                    jQuery.support.cors = true;  
+
+                    $.ajax({
+                        type: 'GET',
+                        
+                        url: urlValue,
+                        dataType: 'jsonp',
+                        jsonp: 'json.wrf',
+                        success: function (response, textStatus, jqXHR) {
+                            // console.log("response :: " + response);
+                            // console.log("textStatus :: " + textStatus);
+                            // console.log("jqXHR :: " + jqXHR);
+                            $("#searchSuggestion").empty();
+                            updateSuggestions(response);
+                        },
+                        error: function (responseData, textStatus, errorThrown) {
+                            alert('POST failed.');
+                        }
+                    });
+                });
+
+                function updateSuggestions (data) {
+
+                    $.each(data, function( key, value ) {
+                        if(key == 'numFound'){
+                            console.log("key :: " + value);
+                            if(parseInt(value) > 0){
+                                var suggestionUl = $('<ul style="list-style: none;" id="suggestList"/>').appendTo('#searchSuggestion');
+                                // $("#searchSuggestion").html(suggestionUl);
+                            }
+                        }
+
+                        if(key == 'term'){
+                            var suggestionli = $('<li>' + value + '</li>' ).appendTo('#suggestList');
+                        }
+
+                        if(value instanceof Object){
+                            updateSuggestions(value);
+                        }            
+                    });
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <div style="float: left;">Enter Car Models :  </div>            
+            <div style="float: left;">
+                <input id="search" type="text" />
+                <div id="searchSuggestion"> 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

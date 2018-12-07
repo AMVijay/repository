@@ -1,0 +1,2 @@
+# solr
+POC using Solr
