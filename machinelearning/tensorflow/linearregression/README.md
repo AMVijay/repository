@@ -3,7 +3,7 @@ Example of Linear Regression Implementation using Tensorflow
 
 ## Technical Stack
 * Python 3.6
-* Tensorflow 1.7
+* Tensorflow 1.12
 * Pycharm Community Edition
 
 ## Environment Setup Instructions
@@ -16,6 +16,9 @@ Example of Linear Regression Implementation using Tensorflow
 * Install Tensorflow using command `pip install tensorflow --trusted-host pypi.org`
 
 ## Notes
+* Refer [Link](https://www.tensorflow.org/guide/datasets#csv-files) for importing CSV files.
+* Yet to explore [implementation](https://www.guru99.com/linear-regression-tensorflow.html)
+
 
 ### What is Linear Regression: 
 
