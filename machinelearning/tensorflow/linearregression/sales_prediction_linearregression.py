@@ -2,8 +2,6 @@ import collections
 import tensorflow as tf
 import numpy as np
 
-# Read CSV Data
-
 # Define Default Values with Key Value Pair
 defaults = collections.OrderedDict([
     ("month", [0]),
@@ -30,14 +28,14 @@ train = dataSet
 test = dataSet
 
 feature_columns = [
-    # "curb-weight" and "highway-mpg" are numeric columns.
+    # "month" are numeric columns.
     tf.feature_column.numeric_column(key="month")
 ]
 
 # Build the Estimator.
-model = tf.estimator.LinearRegressor(feature_columns=feature_columns, loss_reduction= tf.losses.Reduction.MEAN)
+model = tf.estimator.LinearRegressor(feature_columns=feature_columns, loss_reduction=tf.losses.Reduction.MEAN)
 
-STEPS = 500000
+STEPS = 50000
 
 
 # Build the training input_fn.
