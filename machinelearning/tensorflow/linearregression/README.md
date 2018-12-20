@@ -18,7 +18,7 @@ Example of Linear Regression Implementation using Tensorflow
 ## Notes
 * Refer [Link](https://www.tensorflow.org/guide/datasets#csv-files) for importing CSV files.
 * Yet to explore [implementation](https://www.guru99.com/linear-regression-tensorflow.html)
-
+* Refer [StackOverFlow](https://stackoverflow.com/questions/46982168/trying-to-use-linearregressor)
 
 ### What is Linear Regression: 
 
