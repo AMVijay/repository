@@ -1,0 +1,9 @@
+# PyCharm Files
+.idea/
+
+# Virtual Environment Files
+venv/
+
+
+# Python Cache Files
+**/__pycache__/
