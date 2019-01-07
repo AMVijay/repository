@@ -79,7 +79,7 @@ print("Loss: {0:f}".format(loss_score))
 
 # Run the model in prediction mode.
 input_dict = {
-    "month": np.array([5])
+    "month": np.array([1,2,3,4,5,6,7,8,9,10,11,12])
 }
 predict_input_fn = tf.estimator.inputs.numpy_input_fn(
     input_dict, shuffle=False)

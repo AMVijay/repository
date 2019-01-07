@@ -7,9 +7,9 @@ Example of Linear Regression Implementation using Tensorflow
 * Pycharm Community Edition
 
 ## Environment Setup Instructions
-* Execute `envSetup.cmd` in https://github.com/AMVijay/repository/blob/master/machinelearning/tensorflow/envSetup.cmd 
-* create directory "linearregression" using `mkdir linearregression`
-* Navigate to "linearregression" directory and execute `python -m venv venv` to create virtual environment
+* Create directory "linearregression" using `mkdir linearregression` 
+* Navigate to "linearregression" directory and execute `envSetup.cmd` in https://github.com/AMVijay/repository/blob/master/machinelearning/tensorflow/linearregression/envSetup.cmd 
+* Execute `python -m venv venv` to create virtual environment
 * Activate the virtual environment using `linearregression\venv\Scripts>activate.bat`
 * Upgrade PIP to latest version using command `python -m pip install -U pip --trusted-host pypi.org`
 * Upgrade SetupTools to latest version using command `python -m pip install -U setuptools --trusted-host pypi.org`
