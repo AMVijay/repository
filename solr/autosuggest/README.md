@@ -26,6 +26,30 @@ Run the Python Code Utility to import data into solr
 Test Search Suggestion by validateAutoSuggest.html in browser.
 
 
+## Reference
+* https://stackoverflow.com/questions/17400639/sorting-solr-autosuggestion-on-custom-score-field
+
+
+# Notes on Stream
+http://localhost:8983/solr/twokeywords/suggest?suggest=true&suggest.build=true&suggest.dictionary=mySuggester&suggest.q=Toyota
+
+
+select(rollup(
+				hashJoin(
+						search(vehicle, q=*:*, fl=”v_id,model_name”,qt=”/export”, sort=”v_id asc”), 
+						hashed=search(defects, q=*:*, fl=”v_id,defect_id”,qt=”/export”, sort=”v_id asc”), on=”v_id”),
+						over=”model_name”,count(*)
+				),count(*) as defect_count_s,model_name as model_name_
+			s)
+			
+			
+http://localhost:8983/solr/carmodels/stream?rollup(search(carmodels, fl="modelName:Highlander") over="brandNm")&indent=on&q=*:*&wt=json
+
+
+
+curl --data-urlencode 'expr=search(carmodels,q="*:*",fl="brandNm,modelName",sort="_version_ asc",rows="10")' http://localhost:8983/solr/carmodels/stream
+
+
 
 
 
