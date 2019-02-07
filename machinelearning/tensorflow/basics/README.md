@@ -23,7 +23,12 @@ Tensor flow basics understanding
 
 * `tensor_variable.py` - describes how to define a tensor variable and use it in graph. Tensor Variable is also a node in DAG.
     * `tf.get_variable()` - is best way to define a tensor variable.
-    * `tf.variable_scope("model", reuse=tf.AUTO_REUSE)` - helps to reuse the same variable a graph in session execution.  
+    * `tf.variable_scope("model", reuse=tf.AUTO_REUSE)` - helps to reuse the same variable a graph in session execution.
+    
+### houseprice_predictor.py
+* Data used from https://raw.githubusercontent.com/jbrownlee/Datasets/master/housing.data
+* Reference : https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/
+  
 
    
 ## Acronyms and Definition
