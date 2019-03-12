@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>vijay.poc.maven</groupId>
+	<artifactId>artifactdownload</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<name>Download Artifacts</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+	
+	<dependencies>
+        <!-- ... other dependency elements ... -->
+		<dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.1.4.RELEASE</version>
+        </dependency>
+        <!-- <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>5.1.4.RELEASE</version>
+        </dependency> -->
+    </dependencies>
+	
+	<build>
+		<directory>lib</directory>
+		<plugins>
+		  <plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-dependency-plugin</artifactId>
+			<configuration>
+			  <outputDirectory>
+				${project.build.directory}
+			  </outputDirectory>
+			</configuration>
+		  </plugin>
+		</plugins>
+	</build>
+</project>
